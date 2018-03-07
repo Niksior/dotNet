@@ -20,5 +20,14 @@ namespace WindowsFormsApplication1
         }
     }
 
-   
+    public class Car : IAccelerate
+    {
+        int speed;
+        public int Accelerate(int change)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 }

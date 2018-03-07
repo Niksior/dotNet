@@ -20,18 +20,5 @@ namespace WindowsFormsApplication1
         }
     }
 
-    interface IAccelerate
-    {
-        int Accelerate(int change);
-    }
-
-    interface IDive
-    {
-
-    }
-
-    interface IRise
-    {
-
-    }
+   
 }

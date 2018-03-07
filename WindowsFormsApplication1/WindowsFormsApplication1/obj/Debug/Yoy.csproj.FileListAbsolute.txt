@@ -1,0 +1,9 @@
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csprojResolveAssemblyReference.cache
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.GenerateResource.Cache
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+H:\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

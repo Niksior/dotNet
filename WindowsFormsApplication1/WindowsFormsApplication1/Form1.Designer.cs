@@ -61,6 +61,7 @@
             this.toyCatalog.Name = "toyCatalog";
             this.toyCatalog.Size = new System.Drawing.Size(124, 342);
             this.toyCatalog.TabIndex = 0;
+            this.toyCatalog.SelectedIndexChanged += new System.EventHandler(this.toyCatalog_SelectedIndexChanged);
             // 
             // toyOwned
             // 
@@ -69,6 +70,7 @@
             this.toyOwned.Name = "toyOwned";
             this.toyOwned.Size = new System.Drawing.Size(139, 342);
             this.toyOwned.TabIndex = 1;
+            this.toyOwned.SelectedIndexChanged += new System.EventHandler(this.toyOwned_SelectedIndexChanged);
             // 
             // toyNameBox
             // 
@@ -85,6 +87,7 @@
             this.toyAdd.TabIndex = 3;
             this.toyAdd.Text = "Dodaj";
             this.toyAdd.UseVisualStyleBackColor = true;
+            this.toyAdd.Click += new System.EventHandler(this.toyAdd_Click);
             // 
             // toyDelete
             // 

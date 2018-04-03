@@ -8,9 +8,6 @@ namespace WindowsFormsApplication1
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -22,7 +19,7 @@ namespace WindowsFormsApplication1
 
     public class Car : IAccelerate
     {
-        string name;
+        string name = "auto";
         int speed;
 
         Car(string name) => this.name = name;
@@ -35,7 +32,7 @@ namespace WindowsFormsApplication1
 
     public class Submarine : IAccelerate, IDive
     {
-        string name;
+        string name = "łódź podwodna";
         int speed = 0;
         int depth = 0;
 
@@ -54,7 +51,7 @@ namespace WindowsFormsApplication1
 
     public class Plane : IAccelerate, IRise
     {
-        string name;
+        string name = "samolot";
         int speed = 0;
         int altitude = 0;
 
@@ -74,7 +71,7 @@ namespace WindowsFormsApplication1
 
     public class Computer
     {
-        string name;
+        string name = "komputer";
 
         Computer(string name) => this.name = name;
     }

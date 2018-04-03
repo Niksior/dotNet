@@ -23,5 +23,9 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void decreaseAltitude_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

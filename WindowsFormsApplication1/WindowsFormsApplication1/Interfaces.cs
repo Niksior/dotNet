@@ -8,16 +8,16 @@ namespace WindowsFormsApplication1
 {
     interface IAccelerate
     {
-        int Accelerate(int change);
+        void Accelerate(int change);
     }
 
     interface IDive
     {
-        int Dive(int change);
+        void Dive(int change);
     }
 
     interface IRise
     {
-        int Rise(int Rise);
+        void Rise(int change);
     }
 }

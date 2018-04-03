@@ -157,6 +157,7 @@
             this.decreaseAltitude.TabIndex = 13;
             this.decreaseAltitude.Text = "-";
             this.decreaseAltitude.UseVisualStyleBackColor = true;
+            this.decreaseAltitude.Click += new System.EventHandler(this.decreaseAltitude_Click);
             // 
             // increaseDepth
             // 

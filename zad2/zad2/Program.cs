@@ -9,6 +9,7 @@ namespace zad2
     class Program
     {
         private Tablica table = new Tablica();
+        private bool flag = true;
 
         public Program()
         {
@@ -21,7 +22,12 @@ namespace zad2
             Console.ForegroundColor = colors[12];
             Console.Title = "Tabbed";
             Program program = new Program();
-            program.ShowMenu();
+            while(program.flag)
+            {
+                program.ShowMenu();
+                program.ChooseOption();
+            }
+            
  
         }
 
@@ -36,8 +42,23 @@ namespace zad2
             Console.WriteLine("1 - show value");
             Console.WriteLine("2 - write value on index");
             Console.WriteLine("3 - add value on the end");
+            Console.WriteLine("0 - exit");
             Console.WriteLine("---------------------------------------");
-            Console.ReadKey();
+        }
+
+        private void ChooseOption()
+        {
+            Console.Write("Val: ");
+            int choice = Console.Read() - 48;
+            Console.ReadLine();                 //consuming the buffer
+            Console.WriteLine(" ");
+            switch(choice)
+            {
+                case 0:
+                    this.flag = false;
+                    break;
+            }
+           
         }
     }
 }

@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WindowsFormsApplication1
 {
     class MainActions
     {
-        
+        public bool checkName(string name, List<string> names)
+        {
+            bool exist = false;
+            foreach(string nam in names)
+            {
+                if (nam == name) exist = true;
+            }
+            return exist;
+        }
     }
 }

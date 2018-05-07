@@ -42,7 +42,6 @@
             this.decreaseAltitude = new System.Windows.Forms.Button();
             this.increaseDepth = new System.Windows.Forms.Button();
             this.decreaseDepth = new System.Windows.Forms.Button();
-            this.activeToy = new System.Windows.Forms.Label();
             this.speedValue = new System.Windows.Forms.Label();
             this.altitudeValue = new System.Windows.Forms.Label();
             this.depthValue = new System.Windows.Forms.Label();
@@ -97,6 +96,7 @@
             this.toyDelete.TabIndex = 4;
             this.toyDelete.Text = "Usun";
             this.toyDelete.UseVisualStyleBackColor = true;
+            this.toyDelete.Click += new System.EventHandler(this.toyDelete_Click);
             // 
             // label1
             // 
@@ -133,6 +133,7 @@
             this.increaseSpeed.TabIndex = 8;
             this.increaseSpeed.Text = "+";
             this.increaseSpeed.UseVisualStyleBackColor = true;
+            this.increaseSpeed.Click += new System.EventHandler(this.increaseSpeed_Click);
             // 
             // decreaseSpeed
             // 
@@ -142,6 +143,7 @@
             this.decreaseSpeed.TabIndex = 10;
             this.decreaseSpeed.Text = "-";
             this.decreaseSpeed.UseVisualStyleBackColor = true;
+            this.decreaseSpeed.Click += new System.EventHandler(this.decreaseSpeed_Click);
             // 
             // increaseAltitude
             // 
@@ -151,6 +153,7 @@
             this.increaseAltitude.TabIndex = 11;
             this.increaseAltitude.Text = "+";
             this.increaseAltitude.UseVisualStyleBackColor = true;
+            this.increaseAltitude.Click += new System.EventHandler(this.increaseAltitude_Click);
             // 
             // decreaseAltitude
             // 
@@ -170,6 +173,7 @@
             this.increaseDepth.TabIndex = 14;
             this.increaseDepth.Text = "+";
             this.increaseDepth.UseVisualStyleBackColor = true;
+            this.increaseDepth.Click += new System.EventHandler(this.increaseDepth_Click);
             // 
             // decreaseDepth
             // 
@@ -179,14 +183,7 @@
             this.decreaseDepth.TabIndex = 16;
             this.decreaseDepth.Text = "-";
             this.decreaseDepth.UseVisualStyleBackColor = true;
-            // 
-            // activeToy
-            // 
-            this.activeToy.AutoSize = true;
-            this.activeToy.Location = new System.Drawing.Point(687, 22);
-            this.activeToy.Name = "activeToy";
-            this.activeToy.Size = new System.Drawing.Size(0, 13);
-            this.activeToy.TabIndex = 17;
+            this.decreaseDepth.Click += new System.EventHandler(this.decreaseDepth_Click);
             // 
             // speedValue
             // 
@@ -259,7 +256,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 408);
-            this.Controls.Add(this.activeToy);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -301,7 +297,6 @@
         private System.Windows.Forms.Button decreaseAltitude;
         private System.Windows.Forms.Button increaseDepth;
         private System.Windows.Forms.Button decreaseDepth;
-        private System.Windows.Forms.Label activeToy;
         private System.Windows.Forms.Label speedValue;
         private System.Windows.Forms.Label altitudeValue;
         private System.Windows.Forms.Label depthValue;

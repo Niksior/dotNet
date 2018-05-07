@@ -17,3 +17,31 @@ C:\Users\Niksior\Documents\git\dotNet\WindowsFormsApplication1\WindowsFormsAppli
 C:\Users\Niksior\Documents\git\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.CoreCompileInputs.cache
 C:\Users\Niksior\Documents\git\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Niksior\Documents\git\dotNet\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csprojResolveAssemblyReference.cache
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.GenerateResource.Cache
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\pnet-41\Downloads\dotNet-master (1)\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csprojResolveAssemblyReference.cache
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\pnet-41\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.GenerateResource.Cache
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csprojResolveAssemblyReference.cache
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.GenerateResource.cache
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Yoy.csproj.CoreCompileInputs.cache
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Niksior\Documents\dotNet-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

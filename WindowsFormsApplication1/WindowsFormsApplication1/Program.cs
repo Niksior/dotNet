@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -20,13 +17,34 @@ namespace WindowsFormsApplication1
     public class Car : IAccelerate
     {
         string name = "auto";
-        int speed;
+        int speed = 0;
 
-        Car(string name) => this.name = name;
-
+        public Car(string name)
+        {
+            this.name = name;
+        }
         public void Accelerate(int change)
         {
-            this.speed += change;
+            this.speed = change;
+        }
+        string getName()
+        {
+            return name;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
+        public int Speed
+        {
+            get
+            {
+                return this.speed;
+            }
+            set
+            {
+                this.speed = value;
+            }
         }
     }
 
@@ -36,16 +54,48 @@ namespace WindowsFormsApplication1
         int speed = 0;
         int depth = 0;
 
-        Submarine(string name) => this.name = name;
-
+        public Submarine(string name)
+        {
+            this.name = name;
+        }
         public void Accelerate(int change)
         {
-            this.speed += change;
+            this.speed = change;
         }
 
         public void Dive(int change)
         {
-            this.depth += change;
+            this.depth = change;
+        }
+        string getName()
+        {
+            return name;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
+        public int Depth
+        {
+            get
+            {
+                return this.depth;
+            }
+            set
+            {
+                this.depth = value;
+            }
+        }
+        public int Speed
+        {
+            get
+            {
+                return this.speed;
+            }
+            set
+            {
+                this.speed = value;
+            }
         }
     }
 
@@ -55,25 +105,68 @@ namespace WindowsFormsApplication1
         int speed = 0;
         int altitude = 0;
 
-        Plane(string name) => this.name = name;
-
+        public Plane(string name)
+        {
+            this.name = name;
+        }
         public void Accelerate(int change)
         {
-            this.speed += change;
+            this.speed = change;
         }
 
         public void Rise(int change)
         {
-            this.altitude += change;
+            this.altitude = change;
         }
-    
+        string getName()
+        {
+            return name;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
+        public int Speed
+        {
+            get
+            {
+                return this.speed;
+            }
+            set
+            {
+                this.speed = value;
+            }
+        }
+        public int Altitude
+        {
+            get
+            {
+                return this.altitude;
+            }
+            set
+            {
+                this.altitude = value;
+            }
+        }
+
     }
 
     public class Computer
     {
         string name = "komputer";
 
-        Computer(string name) => this.name = name;
+        public Computer(string name)
+        {
+            this.name = name;
+        }
+        string getName()
+        {
+            return name;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
     }
 
 

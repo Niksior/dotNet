@@ -21,7 +21,7 @@ namespace zad2
 
         public void ReadValue(int i)
         {
-            if(i < table.Length && i >= 0)
+            if(i < lastIndex && i >= 0)
             {
                 Console.WriteLine("Value = " + table[i]);
             } else
@@ -57,16 +57,6 @@ namespace zad2
                 tmp[i] = defaultValue;
         }
 
-        public int getLastIndex()
-        {
-            return this.lastIndex;
-        }
-
-        public int[] GetTable()
-        {
-            return this.table;
-        }
-
         private void ResizeTable(int newSize)
         {
             int[] tmp = new int[newSize];
@@ -82,8 +72,9 @@ namespace zad2
             {
                 ResizeTable(table.Length * 2);
             }
-            Console.WriteLine("Provide the value to add on the ond of table");
+            Console.WriteLine("Provide the value to add on the end of table");
             int value = Int32.Parse(Console.ReadLine());
+            if(lastIndex == 0) /////////////////////////
             lastIndex++;
             table[lastIndex] = value;
         }

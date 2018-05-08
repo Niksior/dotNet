@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace zad2
 {
@@ -57,7 +53,44 @@ namespace zad2
                 case 0:
                     this.flag = false;
                     break;
+                case 1:
+                    try
+                    {
+                        Console.WriteLine("Provide index to show value");
+                        int val = Int32.Parse(Console.ReadLine());
+                        table.ReadValue(val);
+                    } catch (OutOfRange e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    break;
+                    
+                case 2:
+                    try
+                    {
+                        table.WriteValue();
+                    } catch (OutOfRange e)
+                    {
+                        Console.WriteLine(e);
+                    }
+
+                    break;
+                case 3:
+                    try
+                    {
+                        table.Add();
+                    } catch (OutOfRange e)
+                    {
+                        Console.WriteLine(e);
+                    }
+
+                    break;
+                default:
+                    Console.WriteLine("Wrong number");
+                    break;
+
             }
+
            
         }
     }

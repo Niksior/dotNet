@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace zad2
 {
@@ -16,12 +12,12 @@ namespace zad2
         {
             table = new int[3];
             FillTable(table);
-            lastIndex = 0;
+            lastIndex = -1;
         }
 
         public void ReadValue(int i)
         {
-            if(i < lastIndex && i >= 0)
+            if(i <= lastIndex && i > -1)
             {
                 Console.WriteLine("Value = " + table[i]);
             } else
@@ -33,19 +29,22 @@ namespace zad2
 
         public void WriteValue()
         {
-            Console.WriteLine("Provide index number, your actual table range is 0-" + (table.Length - 1));
+            
+            Console.WriteLine("Provide index number, your actual table size equals " + lastIndex);
             String tmp;
             tmp = Console.ReadLine();
             int index = Int32.Parse(tmp);
             if (index < 0)
                 throw new OutOfRange();
-            if (index > table.Length - 1)
+            while (index > table.Length - 1)
             {
-                this.lastIndex = index;
-                ResizeTable(index + 1);
+                ResizeTable(table.Length * 2);
             }
             Console.WriteLine("Provide value, it will be written on position [" + index + "]");
             tmp = Console.ReadLine();
+            if (index > lastIndex) lastIndex = index;
+            Console.WriteLine("Value: " + lastIndex + " lastindes");
+            Console.WriteLine("Value: " + table.Length + " length");
             int parsed = Int32.Parse(tmp);
             table[index] = parsed;
             Console.WriteLine("Value: " + parsed + " saved");
@@ -74,7 +73,6 @@ namespace zad2
             }
             Console.WriteLine("Provide the value to add on the end of table");
             int value = Int32.Parse(Console.ReadLine());
-            if(lastIndex == 0) /////////////////////////
             lastIndex++;
             table[lastIndex] = value;
         }

@@ -9,7 +9,7 @@ namespace zad2
 
         public Program()
         {
-
+            //table.ev +=
         }
 
         static void Main(string[] args)

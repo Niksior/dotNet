@@ -7,12 +7,20 @@ namespace zad2
         private int[] table;
         private int lastIndex;
         private int defaultValue = 6;
+        MyEvent ev = null;
+        public delegate void ThresholdReachedEventHandler(object sender, ThresholdReachedEventArgs e); //https://docs.microsoft.com/pl-pl/dotnet/standard/events/how-to-raise-and-consume-events
+
+        static void c_ThresholdReached(object sender, EventArgs e)
+        {
+            Console.WriteLine("New size is ");
+        }
 
         public Tablica()
         {
             table = new int[3];
-            FillTable(table);
             lastIndex = -1;
+            ev = new MyEvent();
+            ev.ThresholdReached += c_ThresholdReached;
         }
 
         public void ReadValue(int i)
@@ -43,26 +51,27 @@ namespace zad2
             Console.WriteLine("Provide value, it will be written on position [" + index + "]");
             tmp = Console.ReadLine();
             if (index > lastIndex) lastIndex = index;
-            Console.WriteLine("Value: " + lastIndex + " lastindes");
-            Console.WriteLine("Value: " + table.Length + " length");
             int parsed = Int32.Parse(tmp);
             table[index] = parsed;
             Console.WriteLine("Value: " + parsed + " saved");
         }
 
-        private void FillTable(int[] tmp)
+        private void FillTable(int[] tmp ,int range)
         {
-            for (int i = 0; i < tmp.Length; i++)
+            for (int i = 0; i < range; i++)
                 tmp[i] = defaultValue;
         }
 
         private void ResizeTable(int newSize)
         {
             int[] tmp = new int[newSize];
-            FillTable(tmp);
+            FillTable(tmp, lastIndex);
             for (int i = 0; i < table.Length; i++)
                 tmp[i] = table[i];
             this.table = tmp;
+            EventProgram obj1 = new EventProgram();
+            string result = obj1.MyEvent("Tutorials Point");
+            Console.WriteLine(result);
         }
 
         public void Add()

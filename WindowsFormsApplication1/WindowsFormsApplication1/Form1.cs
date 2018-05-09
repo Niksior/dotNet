@@ -6,7 +6,6 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        private List<string> ownedToys = new List<string>();
         private MainActions actions = new MainActions();
         public Form1()
         {
@@ -63,7 +62,7 @@ namespace WindowsFormsApplication1
 
             int i = 0;
             string newName = name;
-            while(actions.checkName(newName, ownedToys))
+            while(checkName(newName))
             {
                 newName = String.Concat(name , i.ToString());
                 i++;
@@ -86,14 +85,12 @@ namespace WindowsFormsApplication1
                 Computer computer = new Computer(newName);
                 toyOwned.Items.Add(computer);
             }
-            ownedToys.Add(newName);
         }
 
         private void toyDelete_Click(object sender, EventArgs e)
         {
             if (toyOwned.SelectedIndex > 0)
-            {
-                ownedToys.Remove(toyOwned.GetItemText(toyOwned.SelectedItem));
+            { 
                 toyOwned.Items.RemoveAt(toyOwned.SelectedIndex);
             }
         }
@@ -161,6 +158,16 @@ namespace WindowsFormsApplication1
             dive.Dive(dive.Depth - 1);
 
             depthValue.Text = dive.Depth.ToString();
+        }
+
+        public bool checkName(string name)
+        {
+            bool exist = false;
+            foreach (var nam in toyOwned.Items)
+            {
+                if (nam.ToString() == name) exist = true;
+            }
+            return exist;
         }
     }
 }

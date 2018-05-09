@@ -1,0 +1,3 @@
+dodaæ zdarzenia do obiektu tablicy
+zdarzenie wywo³ywane w przypadku rozszerzenia tablicy
+jeden z argumentów to aktualny rozmiar tablicy

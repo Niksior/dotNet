@@ -9,7 +9,6 @@ namespace zad2
 
         public Program()
         {
-            //table.ev +=
         }
 
         static void Main(string[] args)
@@ -18,6 +17,7 @@ namespace zad2
             Console.ForegroundColor = colors[12];
             Console.Title = "Tabbed";
             Program program = new Program();
+            program.table.TableResized += table_TableResized;
             while(program.flag)
             {
                 program.ShowMenu();
@@ -25,6 +25,11 @@ namespace zad2
             }
             
  
+        }
+
+        static void table_TableResized(object sender, MyEventArgs e)
+        {
+            Console.WriteLine("Table resized to {0}.", e.TableSize);
         }
 
         private void ShowMenu()

@@ -7,21 +7,27 @@ namespace zad2
         private int[] table;
         private int lastIndex;
         private int defaultValue = 6;
-        MyEvent ev = null;
-        public delegate void ThresholdReachedEventHandler(object sender, ThresholdReachedEventArgs e); //https://docs.microsoft.com/pl-pl/dotnet/standard/events/how-to-raise-and-consume-events
+        public event EventHandler<MyEventArgs> TableResized;
+        //https://docs.microsoft.com/pl-pl/dotnet/standard/events/how-to-raise-and-consume-events
 
-        static void c_ThresholdReached(object sender, EventArgs e)
-        {
-            Console.WriteLine("New size is ");
-        }
+     
 
         public Tablica()
         {
             table = new int[3];
             lastIndex = -1;
-            ev = new MyEvent();
-            ev.ThresholdReached += c_ThresholdReached;
+            
         }
+
+        protected virtual void OnTableResized(MyEventArgs e)
+        {
+            EventHandler<MyEventArgs> handler = TableResized;
+            if(handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
 
         public void ReadValue(int i)
         {
@@ -38,7 +44,7 @@ namespace zad2
         public void WriteValue()
         {
             
-            Console.WriteLine("Provide index number, your actual table size equals " + lastIndex);
+            Console.WriteLine("Provide index number, your actual table size equals " + lastIndex + 1);
             String tmp;
             tmp = Console.ReadLine();
             int index = Int32.Parse(tmp);
@@ -69,9 +75,9 @@ namespace zad2
             for (int i = 0; i < table.Length; i++)
                 tmp[i] = table[i];
             this.table = tmp;
-            EventProgram obj1 = new EventProgram();
-            string result = obj1.MyEvent("Tutorials Point");
-            Console.WriteLine(result);
+            MyEventArgs args = new MyEventArgs();
+            args.TableSize = newSize;
+            OnTableResized(args);
         }
 
         public void Add()

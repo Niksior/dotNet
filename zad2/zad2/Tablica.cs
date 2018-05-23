@@ -6,88 +6,72 @@ namespace zad2
     {
         private int[] table;
         private int lastIndex;
-        private int defaultValue = 6;
+        private int defaultValue;
         public event EventHandler<MyEventArgs> TableResized;
-        //https://docs.microsoft.com/pl-pl/dotnet/standard/events/how-to-raise-and-consume-events
-
-     
 
         public Tablica()
         {
-            table = new int[3];
-            lastIndex = -1;
-            
+            this.table = new int[3];
+            this.defaultValue = 3;
+            this.FillTable(table);
+            this.lastIndex = -1;
+        }
+
+        public int GetLastIndex()
+        {
+            return lastIndex;
+        }
+
+        public int GetTableLength()
+        {
+            return table.Length;
         }
 
         protected virtual void OnTableResized(MyEventArgs e)
         {
-            EventHandler<MyEventArgs> handler = TableResized;
-            if(handler != null)
-            {
-                handler(this, e);
-            }
+            TableResized?.Invoke(this, e);
         }
 
 
-        public void ReadValue(int i)
+        public int ReadValue(int i)
         {
-            if(i <= lastIndex && i > -1)
-            {
-                Console.WriteLine("Value = " + table[i]);
-            } else
-            {
-                throw new OutOfRange();
-            }
+            return table[i];
                 
         }
 
-        public void WriteValue()
-        {
-            
-            Console.WriteLine("Provide index number, your actual table size equals " + lastIndex + 1);
-            String tmp;
-            tmp = Console.ReadLine();
-            int index = Int32.Parse(tmp);
-            if (index < 0)
-                throw new OutOfRange();
-            while (index > table.Length - 1)
+        public void WriteValue(int index, int val)
+        {      
+            if (index > table.Length - 1)
             {
-                ResizeTable(table.Length * 2);
+                ResizeTable((index + 1) * 2);
             }
-            Console.WriteLine("Provide value, it will be written on position [" + index + "]");
-            tmp = Console.ReadLine();
             if (index > lastIndex) lastIndex = index;
-            int parsed = Int32.Parse(tmp);
-            table[index] = parsed;
-            Console.WriteLine("Value: " + parsed + " saved");
+            table[index] = val;
         }
 
-        private void FillTable(int[] tmp ,int range)
+        private void FillTable(int[] tab)
         {
-            for (int i = 0; i < range; i++)
-                tmp[i] = defaultValue;
+            for (int i = 0; i < tab.Length; i++)
+                tab[i] = defaultValue;
         }
 
         private void ResizeTable(int newSize)
         {
             int[] tmp = new int[newSize];
-            FillTable(tmp, lastIndex);
-            for (int i = 0; i < table.Length; i++)
+            FillTable(tmp);
+            for (int i = 0; i < lastIndex; i++)
                 tmp[i] = table[i];
             this.table = tmp;
-            MyEventArgs args = new MyEventArgs();
-            args.TableSize = newSize;
-            OnTableResized(args);
+            
+            OnTableResized(new MyEventArgs(newSize));
         }
 
-        public void Add()
+        public void Add(int value)
         {
             if(table.Length - 1 == lastIndex)
             {
                 ResizeTable(table.Length * 2);
             }
-            Console.WriteLine("Provide the value to add on the end of table");
-            int value = Int32.Parse(Console.ReadLine());
             lastIndex++;
             table[lastIndex] = value;
         }

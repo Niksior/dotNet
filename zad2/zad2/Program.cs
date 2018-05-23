@@ -23,13 +23,11 @@ namespace zad2
                 program.ShowMenu();
                 program.ChooseOption();
             }
-            
- 
         }
 
         static void table_TableResized(object sender, MyEventArgs e)
         {
-            Console.WriteLine("Table resized to {0}.", e.TableSize);
+            Console.WriteLine("\tTable resized to {0}.", e.TableSize);
         }
 
         private void ShowMenu()
@@ -50,8 +48,7 @@ namespace zad2
         private void ChooseOption()
         {
             Console.Write("Val: ");
-            int choice = Console.Read() - 48;
-            Console.ReadLine();                 //consuming the buffer
+            int choice = Int32.Parse(Console.ReadLine());                 
             Console.WriteLine(" ");
             switch(choice)
             {
@@ -63,40 +60,54 @@ namespace zad2
                     {
                         Console.WriteLine("Provide index to show value");
                         int val = Int32.Parse(Console.ReadLine());
-                        table.ReadValue(val);
+                        if (val <= table.GetLastIndex() && val > -1)
+                        {
+                            Console.WriteLine("Value = " + table.ReadValue(val));
+                        }
+                        else
+                        {
+                            throw new OutOfRange();
+                        }
+                        
                     } catch (OutOfRange e)
                     {
                         Console.WriteLine(e);
                     }
                     break;
-                    
                 case 2:
                     try
                     {
-                        table.WriteValue();
+                        Console.WriteLine("Provide index number, your actual table size equals " + (table.GetLastIndex() + 1));
+                        String tmp;
+                        tmp = Console.ReadLine();
+                        int index = Int32.Parse(tmp);
+                        if (index < 0)
+                            throw new OutOfRange();
+                        Console.WriteLine("Provide value, it will be written on position [" + index + "]");
+                        tmp = Console.ReadLine();
+                        int val = Int32.Parse(tmp);
+                        table.WriteValue(index, val);
+                        Console.WriteLine("Value: " + val + " saved");
                     } catch (OutOfRange e)
                     {
                         Console.WriteLine(e);
                     }
-
                     break;
                 case 3:
                     try
                     {
-                        table.Add();
+                        Console.WriteLine("Provide the value to add on the end of table");
+                        int value = Int32.Parse(Console.ReadLine());
+                        table.Add(value);
                     } catch (OutOfRange e)
                     {
                         Console.WriteLine(e);
                     }
-
                     break;
                 default:
                     Console.WriteLine("Wrong number");
                     break;
-
             }
-
-           
         }
     }
 }

@@ -8,6 +8,10 @@ namespace zad2
 {
     class MyEventArgs : EventArgs
     {
+        public MyEventArgs(int size)
+        {
+            TableSize = size;
+        }
         public int TableSize { get; set; }
     }
 }

@@ -1,0 +1,16 @@
+ostatnie .net
+zrealizowaæ klienkt i serwer do kopiowania plików
+tcp
+
+klient:
+przekazaæ nazwê pliku i d³ugoœæ spodziewan¹ i wys³aæ strumieñ danych
+
+
+serwer:
+odczytaæ nazwê, rozwmiar i plik, a potem zapisaæ
+
+4 - odczytaj, wyœlij, odbierz, zapisz
+
+4,5 - wysy³aæ porcjami, ¿eby du¿e pliki
+
+5 - serwer dzia³a wielow¹tkowo
